@@ -9,10 +9,10 @@ var x;
 x=-100;
 function draw() {
 	background(200);
-  
+  if(mouseIsPressed){
   var force = createVector(-0.01,0);
   man.applyForce(force);
-  
+  }
 	translate(-man.pos.x,0);
 	man.update();
 	man.display();
