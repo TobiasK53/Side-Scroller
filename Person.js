@@ -3,11 +3,8 @@ function Person(x, y, m) {
   this.vel = createVector(1, 0);
   this.acc = createVector(1, 0);
   // this.mass = m;
-
   this.applyForce = function(force) {
-    var f = force.copy();
-    f.div(this.mass);
-    this.acc.add(f);
+   this.acc.add(force);
   }
 
   this.update = function() {
